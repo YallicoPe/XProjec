@@ -1,19 +1,19 @@
 const handler = async (m, {conn}) => {
-  m.reply(global.Infinity);
+  m.reply(global.Servidor);
 };
-handler.command = /^(Infinity|Servidor)$/i;
+handler.command = /^(Servidor|Servidor)$/i;
 export default handler;
 
-global.Infinity = `
+global.Servidor = `
 _Información del Host 🕷️_
 
-*Host De Calidad Infinity - Proyecto X 🕷️*
+*Host De Calidad Servidor - Proyecto X 🕷️*
 
 *🖥️ Página :*
-https://dashboard.infinitywa.xyz/
+https://dashboard.Servidorwa.xyz/
 
 *👤 Contacto :*
 https://wa.me/51926933818
 
-*Infinity Ofrece Un Buen Server Y Sobre Todo Ofrece Servidor A Buenos Precios 🕷️*
+*Servidor Ofrece Un Buen Server Y Sobre Todo Ofrece Servidor A Buenos Precios 🕷️*
 `;

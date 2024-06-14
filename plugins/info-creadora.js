@@ -11,9 +11,9 @@ global.Creador = `
 
 *Proyecto X Vendedores :*
 
-*👤 Ig :*
-*🇵🇪Contact :*
+*👤 Ig :* https://www.instagram.com/sdjfskj
+*🇵🇪 Contact :* https://wa.me/51977835251
 
-*👤 Ig :*
-*🇵🇪Contact :*
+*👤 Ig :* https://www.instagram.com/_dianita.dzn
+*🇦🇷 Contact :* https://wa.me/5493751366296
 `;
