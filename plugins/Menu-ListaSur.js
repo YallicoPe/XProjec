@@ -112,7 +112,7 @@ let menu =`
  *┃➤* _${usedPrefix}ListaVs20_
  *┃➤* _${usedPrefix}ListaVs22_
   ╰━━━━━━━━━━━━━`.trim()
-await conn.sendFile(m.chat, gataImg, 'lp.jpg', menu, fkontak, false, { contextInfo: {mentionedJid, externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, title: gt, body: ' 🕷️ 𝐏𝐑𝐎𝐘𝐄𝐂𝐓𝐎 𝐗', previewType: 0, thumbnail: imagen4, sourceUrl: redesMenu }}})
+await conn.sendFile(m.chat, gataImg, 'lp.jpg', menu, fkontak, false, { contextInfo: {mentionedJid, externalAdReply :{ mediaUrl: 'https://www.instagram.com/cristhofer_yallico', mediaType: 1, description: null, title: gt, body: ' 🕷️ 𝐏𝐑𝐎𝐘𝐄𝐂𝐓𝐎 𝐗', previewType: 0, thumbnail: imagen4, sourceUrl: redesMenu }}})
 //conn.sendFile(m.chat, gataVidMenu.getRandom(), 'gata.mp4', menu, fkontak)
 } catch (e) {
 await m.reply(lenguajeGB['smsMalError3']() + '\n*' + lenguajeGB.smsMensError1() + '*\n*' + usedPrefix + `${lenguajeGB.lenguaje() == 'es' ? 'reporte' : 'report'}` + '* ' + `${lenguajeGB.smsMensError2()} ` + usedPrefix + command)
@@ -123,7 +123,7 @@ console.log(e)}
 }
 
 //handler.command = /^(menu|menú|memu|memú|help|info|comandos|2help|menu1.2|ayuda|commands|commandos|menucompleto|allmenu|allm|m|\?)$/i
-handler.command = /^(ListaSur|listasur|\?)$/i
+handler.command = /^(ListaVs1|\?)$/i
 handler.register = true
 export default handler
 

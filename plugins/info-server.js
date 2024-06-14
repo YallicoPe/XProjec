@@ -10,7 +10,7 @@ _Información del Host 🕷️_
 *Host De Calidad Servidor - Proyecto X 🕷️*
 
 *🖥️ Página :*
-https://dashboard.Servidorwa.xyz/
+https://dashboard.infinitywa.xyz/
 
 *👤 Contacto :*
 https://wa.me/51926933818
