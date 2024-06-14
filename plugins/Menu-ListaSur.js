@@ -1,12 +1,21 @@
 import fs from 'fs'
+import translate from '@vitalets/google-translate-api'
 import moment from 'moment-timezone'
+import ct from 'countries-and-timezones'
+import { parsePhoneNumber } from 'libphonenumber-js'
 import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 const { levelling } = '../lib/levelling.js'
 import PhoneNumber from 'awesome-phonenumber'
 import { promises } from 'fs'
 import { join } from 'path'
+import chalk from 'chalk'
+
 let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text, command }) => {
+let chat = global.db.data.chats[m.chat]
+let user = global.db.data.users[m.sender]
+let bot = global.db.data.settings[conn.user.jid] || {}
+ 
 try {
 let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
 let { exp, limit, level, role } = global.db.data.users[m.sender]
@@ -41,7 +50,6 @@ setTimeout(resolve, 1000)
 }) * 1000
 }
 let { money, joincount } = global.db.data.users[m.sender]
-let user = global.db.data.users[m.sender]
 let muptime = clockString(_muptime)
 let uptime = clockString(_uptime)
 let totalreg = Object.keys(global.db.data.users).length
@@ -66,22 +74,35 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
 let mentionedJid = [who]
 let username = conn.getName(who)
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
-let pp = gataVidMenu.getRandom()
+let pp = gataVidMenu
 let pareja = global.db.data.users[m.sender].pasangan 
-let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
-//let fsizedoc = '1'.repeat(10)
-//let adReply = { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: { forwardingScore: fsizedoc, externalAdReply: { showAdAttribution: true, title: wm, body: '👋 ' + username, mediaUrl: ig, description: 'Hola', previewType: 'PHOTO', thumbnail: await(await fetch(gataMenu.getRandom())).buffer(), sourceUrl: redesMenu.getRandom() }}}
 const numberToEmoji = { "0": "0️⃣", "1": "1️⃣", "2": "2️⃣", "3": "3️⃣", "4": "4️⃣", "5": "5️⃣", "6": "6️⃣", "7": "7️⃣", "8": "8️⃣", "9": "9️⃣", }
 let lvl = level
 let emoji = Array.from(lvl.toString()).map((digit) => numberToEmoji[digit] || "❓").join("")
 
-const lugarFecha = moment().tz('America/Lima')
-const formatoFecha = {
-weekdays: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
-months: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
-}
-lugarFecha.locale('es', formatoFecha)
-const horarioFecha = lugarFecha.format('dddd, DD [de] MMMM [del] YYYY || HH:mm A').replace(/^\w/, (c) => c.toUpperCase())
+let fechaMoment, formatDate, nombreLugar, ciudad = null
+const phoneNumber = '+' + m.sender
+const parsedPhoneNumber = parsePhoneNumber(phoneNumber)
+const countryCode = parsedPhoneNumber.country
+const countryData = ct.getCountry(countryCode)
+const timezones = countryData.timezones
+const zonaHoraria = timezones.length > 0 ? timezones[0] : 'UTC'
+moment.locale(mid.idioma_code)
+let lugarMoment = moment().tz(zonaHoraria)
+if (lugarMoment) {
+fechaMoment = lugarMoment.format('llll [(]a[)]')
+formatDate = fechaMoment.charAt(0).toUpperCase() + fechaMoment.slice(1) 
+nombreLugar = countryData.name
+const partes = zonaHoraria.split('/')
+ciudad = partes[partes.length - 1].replace(/_/g, ' ')
+}else{
+lugarMoment = moment().tz('America/Lima')
+fechaMoment = lugarMoment.format('llll [(]a[)]')
+formatDate = fechaMoment.charAt(0).toUpperCase() + fechaMoment.slice(1) 
+nombreLugar = 'America'
+ciudad = 'Lima'
+}	
+
 
 let menu =`
   ╭━〔 *🕷️ Free Fire Sur 🕷️* 〕
@@ -91,16 +112,19 @@ let menu =`
  *┃➤* _${usedPrefix}ListaVs20_
  *┃➤* _${usedPrefix}ListaVs22_
   ╰━━━━━━━━━━━━━`.trim()
-await conn.sendFile(m.chat, gataImg.getRandom(), 'lp.jpg', menu, fkontak, false, { contextInfo: {mentionedJid, externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, title: gt, body: '𝙋𝙍𝙊𝙔𝙀𝘾𝙏𝙊 𝙓 🕷️', previewType: 0, thumbnail: imagen4, sourceUrl: redesMenu.getRandom()}}})
+await conn.sendFile(m.chat, gataImg, 'lp.jpg', menu, fkontak, false, { contextInfo: {mentionedJid, externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, title: gt, body: ' 🕷️ 𝐏𝐑𝐎𝐘𝐄𝐂𝐓𝐎 𝐗', previewType: 0, thumbnail: imagen4, sourceUrl: redesMenu }}})
 //conn.sendFile(m.chat, gataVidMenu.getRandom(), 'gata.mp4', menu, fkontak)
-	
 } catch (e) {
 await m.reply(lenguajeGB['smsMalError3']() + '\n*' + lenguajeGB.smsMensError1() + '*\n*' + usedPrefix + `${lenguajeGB.lenguaje() == 'es' ? 'reporte' : 'report'}` + '* ' + `${lenguajeGB.smsMensError2()} ` + usedPrefix + command)
 console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗❗`)
-console.log(e)}}
+console.log(e)}
+
+
+}
 
 //handler.command = /^(menu|menú|memu|memú|help|info|comandos|2help|menu1.2|ayuda|commands|commandos|menucompleto|allmenu|allm|m|\?)$/i
-handler.command = /^(ListaSur|listasur|\?)$/i
+handler.command = /^(menucompleto|menu|\?)$/i
+handler.register = true
 export default handler
 
 const more = String.fromCharCode(8206)
@@ -110,3 +134,69 @@ let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
 let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
 let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
 return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}  
+
+// Función para formatear arrays de comandos
+function generateCommand(commandsArray, usedPrefix) {
+const formattedCommands = commandsArray
+.filter(command => {
+const comandoValido = command.comando && typeof command.comando === 'function' && command.comando()
+const descripcionValida = command.descripcion && typeof command.descripcion === 'function'
+const contextoValido = typeof command.contexto === 'string' && command.contexto.trim() !== ''
+return comandoValido || descripcionValida || contextoValido
+})
+.map((command, index, array) => {
+const prefix = (command.showPrefix === true && ((typeof command.comando === 'function' && typeof command.comando() === 'string' && command.comando().trim() !== '') ||
+(typeof command.comando === 'string' && command.comando.trim() !== ''))) ? usedPrefix : ''
+let formattedCommand = ''
+if (command.comando) {
+if (typeof command.comando === 'function') {
+const commandResult = command.comando()
+if (typeof commandResult === 'string') {
+formattedCommand = commandResult.trim()
+}} else if (typeof command.comando === 'string') {
+formattedCommand = command.comando.trim()
+}}
+if (formattedCommand.includes(',')) {
+formattedCommand = mid.idioma_code === 'es' ? formattedCommand.split(',')[0].trim() : formattedCommand.split(',')[1].trim()
+}
+let formattedDescription = ''
+if (command.descripcion) {
+if (typeof command.descripcion === 'function') {
+const descriptionResult = command.descripcion()
+if (typeof descriptionResult === 'string') {
+formattedDescription = descriptionResult.trim()
+}} else if (typeof command.descripcion === 'string') {
+formattedDescription = command.descripcion.trim()
+}}
+if (formattedDescription.includes('||')) {
+formattedDescription = mid.idioma_code === 'es' ? formattedDescription.split('||')[0].trim() : formattedDescription.split('||')[1].trim()
+}
+let formattedContext = ''
+if (command.contexto) {
+if (typeof command.contexto === 'function') {
+const contextResult = command.contexto()
+if (typeof contextResult === 'string') {
+formattedContext = contextResult.trim()
+}} else if (typeof command.contexto === 'string' && command.contexto.trim() !== '') {
+formattedContext = command.contexto.trim()
+}}
+let message = ''
+if (formattedCommand) {
+message += `✓ \`${prefix}${formattedCommand}\``
+if (formattedDescription) {
+message += `\n${(command.descripcion && typeof command.descripcion === 'function') ? '𖡡' : '≡'} \`\`\`${formattedDescription}\`\`\``
+}
+if (formattedContext) {
+message += '\nⓘ _' + formattedContext + '_' + (index !== array.length - 1 ? '\n' : '')
+}}
+return message
+})
+.filter(message => message !== '')
+return formattedCommands.join('\n')
+}
+
+// comando: Si hay comando en español y inglés separar por (,) máximo 2 comandos 
+// descripcion: Parámetros para usar el comando. Separar por (||) máximo 2 descripciones 
+// contexto: Explicación de que trata el comando
+// showPrefix: Usar true para que muestre el prefijo, de lo contrario usar false
+// Si algún objeto no se va usar dejar en false, menos el objeto "comando" ya que si es false no mostrará nada

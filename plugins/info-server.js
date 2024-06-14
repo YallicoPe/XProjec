@@ -1,7 +1,7 @@
 const handler = async (m, {conn}) => {
   m.reply(global.Infinity);
 };
-handler.command = /^(Infinity|Server)$/i;
+handler.command = /^(Infinity|Servidor)$/i;
 export default handler;
 
 global.Infinity = `

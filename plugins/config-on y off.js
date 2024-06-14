@@ -582,7 +582,7 @@ ${wm}`, fkontak, { mentions: [aa,] })
 //conn.sendMessage(m.chat, texto, {quoted: fkontak})	
 throw false
 }
-await conn.reply(m.chat, `*${isEnable ? '🕷️' : '🕷️ '} Proyecto X Anuncia Que Se 'Activo' : 'Desactivado'} La Función Correctamente En ${isAll ? 'El Bot' : isUser ? '' : 'El Grupo'}*`, fkontak, m)}
+await conn.reply(m.chat, `*${isEnable ? '🕷️' : '🕷️ '} Proyecto X Anuncia Que La Función Se Marco Correctamente En ${isAll ? 'El Bot' : isUser ? '' : 'El Grupo'}*`, fkontak, m)}
 handler.help = ['en', 'dis'].map(v => v + 'able <option>')
 handler.tags = ['group', 'owner']
 handler.command = /^((en|dis)able|(tru|fals)e|(turn)?o(n|ff)|[01])$/i
