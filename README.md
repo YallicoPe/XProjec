@@ -5,8 +5,7 @@
 <p align="center">
 <img src="https://telegra.ph/file/27e284cbab7da68fb6327.jpg" alt="YALLICO PE" width="800"/>
   
-> Antes de usar este repositorio, visita la **[Política de GataBot. 😼](https://github.com/GataNina-Li/GataBot-MD/blob/master/terms.md)** 
-</p>
+<*El MEJOR REPOSITORIO QUE VERAS EN TU VIDA 🕷️*</p>
 
 <p align="center">
 <a href="#"><img title="GataBot-MD" src="https://img.shields.io/badge/SI TE AGRADA EL REPOSITORIO APOYAME CON UNA 🌟 ¡GRACIAS! -red?colorA=%255ff0000&colorB=%23017e40&style=for-the-badge"></a> 
