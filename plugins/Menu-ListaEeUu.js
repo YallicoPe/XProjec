@@ -105,11 +105,11 @@ ciudad = 'Lima'
 
 let menu =`
   ╭━〔 *🕷️ Free Fire EeUu 🕷️* 〕
- *┃➤* _${usedPrefix}ListaVs13
- *┃➤* _${usedPrefix}ListaVs15
- *┃➤* _${usedPrefix}ListaVs17
- *┃➤* _${usedPrefix}ListaVs19
- *┃➤* _${usedPrefix}ListaVs21
+ *┃➤* _${usedPrefix}ListaVs13_
+ *┃➤* _${usedPrefix}ListaVs15_
+ *┃➤* _${usedPrefix}ListaVs17_
+ *┃➤* _${usedPrefix}ListaVs19_
+ *┃➤* _${usedPrefix}ListaVs21_
   ╰━━━━━━━━━━━━━`.trim()
 await conn.sendFile(m.chat, gataImg, 'lp.jpg', menu, fkontak, false, { contextInfo: {mentionedJid, externalAdReply :{ mediaUrl: 'https://www.instagram.com/cristhofer_yallico', mediaType: 1, description: null, title: gt, body: ' 🕷️ 𝐏𝐑𝐎𝐘𝐄𝐂𝐓𝐎 𝐗', previewType: 0, thumbnail: imagen4, sourceUrl: redesMenu }}})
 //conn.sendFile(m.chat, gataVidMenu.getRandom(), 'gata.mp4', menu, fkontak)
