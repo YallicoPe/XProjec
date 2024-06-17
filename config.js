@@ -13,9 +13,10 @@ import { en, es, id, ar, pt } from "./lib/idiomas/total-idiomas.js"
 // [ES] > Agrega el número que será Bot y los que serán propietarios.
 // [EN] > Add the number that will be Bot and those that will be owners.
 global.owner = [
-["51926933818", '🕷️ 𝐏𝐑𝐎𝐘𝐄𝐂𝐓𝐎 𝐗', true],
-["51977835251", '🕷️ 𝐏𝐑𝐎𝐘𝐄𝐂𝐓𝐎 𝐗', true],
-["51981983121", '🕷️ 𝐏𝐑𝐎𝐘𝐄𝐂𝐓𝐎 𝐗', true]]
+["51926933818", '𝙋𝙍𝙊𝙔𝙀𝘾𝙏𝙊 𝙓 🕷️', true], //𝙋𝙍𝙊𝙔𝙀𝘾𝙏𝙊 𝙓 🕷️
+["51977835251", '𝙋𝙍𝙊𝙔𝙀𝘾𝙏𝙊 𝙓 🕷️', true],
+["5493751366296", '𝙋𝙍𝙊𝙔𝙀𝘾𝙏𝙊 𝙓 🕷️', true],
+["51981983121"]]
 
 global.mods = []
 global.prems = []
@@ -47,7 +48,7 @@ global.confirmCode = "" // No tocar esto : Do not touch this line
 // English 👉 en
 global.lenguajeGB = es
 global.mid = esDefault
-global.version_language = '1'
+global.version_language = '1.0'
 
 // [ES] > Si "default_language" esta vacío, su idioma predeterminado será Español o se usará el idioma que cada usuario haya seleccionado al momento de registrarse. 
 // [EN] > If "default_language" is empty, your default language will be Spanish or the language that each user has selected at the time of registration will be used.
@@ -55,7 +56,7 @@ global.version_language = '1'
 
 // • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
 // ❰❰ API KEYS ❱❱
-global.Key360 = ["964f-0c75-7afc"] // key violetics
+global.Key360 = ["Gata_Dios"] // key Ephoto360
 global.openai_key = 'sk-0' // Api New: https://platform.openai.com/account/api-keys 
 global.openai_org_id = 'org-3' // Api New: https://platform.openai.com/account/org-settings */
 global.keysZens = ["LuOlangNgentot", "c2459db922", "37CC845916", "6fb0eff124", "hdiiofficial", "fiktod", "BF39D349845E", "675e34de8a", "0b917b905e6f"]
@@ -64,7 +65,7 @@ global.keysxteammm = ["29d4b59a4aa687ca", "5LTV57azwaid7dXfz5fzJu", "cb15ed422c7
 global.keysxteam = keysxteammm[Math.floor(keysxteammm.length * Math.random())]
 global.keysneoxrrr = ["5VC9rvNx", "cfALv5"]
 global.keysneoxr = keysneoxrrr[Math.floor(keysneoxrrr.length * Math.random())]
-global.lolkeysapi = "GataDios"
+global.lolkeysapi = "Gata_Dios"
 global.itsrose = ["4b146102c4d500809da9d1ff"]
 global.baileys = "@whiskeysockets/baileys"
 
@@ -77,7 +78,7 @@ neoxr: 'https://api.neoxr.my.id',
 zenzapis: 'https://api.zahwazein.xyz',
 akuari: 'https://api.akuari.my.id',
 akuari2: 'https://apimu.my.id',	
-fgmods: 'https://api-fgmods.ddns.net',
+fgmods: 'https://api.fgmods.xyz', 
 botcahx: 'https://api.botcahx.biz.id',
 ibeng: 'https://api.ibeng.tech/docs',	
 rose: 'https://api.itsrose.site',
@@ -91,6 +92,7 @@ global.APIKeys = {
 'https://api.neoxr.my.id': `${keysneoxr}`,	
 'https://violetics.pw': 'beta',
 'https://api.zahwazein.xyz': `${keysxxx}`,
+'https://api.fgmods.xyz': 'DRLg5kY7', 
 'https://api-fgmods.ddns.net': 'fg-dylux',
 'https://api.botcahx.biz.id': 'Admin',
 'https://api.ibeng.tech/docs': 'tamvan',
@@ -112,9 +114,10 @@ global.moment = moment
 // [ES] > Agregate a ti, colaboradores o ayudates, aparecerá en el comando de lista de contactos.
 // [EN] > Adding yourself, collaborators or helpers will appear in the contact list command.
 global.official = [ // Agregate si eres Owner
-["51926933818", '🕷️ 𝐏𝐑𝐎𝐘𝐄𝐂𝐓𝐎 𝐗', 1], 
-["51977835251", '🕷️ 𝐏𝐑𝐎𝐘𝐄𝐂𝐓𝐎 𝐗', 1], 
-["51981983121", '🕷️ 𝐏𝐑𝐎𝐘𝐄𝐂𝐓𝐎 𝐗', 1]]
+["51926933818", '𝙋𝙍𝙊𝙔𝙀𝘾𝙏𝙊 𝙓 🕷️', 1], 
+["51977835251", '𝙋𝙍𝙊𝙔𝙀𝘾𝙏𝙊 𝙓 🕷️', 1],
+["51981983121", '𝙋𝙍𝙊𝙔𝙀𝘾𝙏𝙊 𝙓 🕷️', 1],
+["5493751366296", '𝙋𝙍𝙊𝙔𝙀𝘾𝙏𝙊 𝙓 🕷️', 1]]
 
 global.mail = '' // Add email
 global.desc = '' // Add short description (20 caractres max)
@@ -122,131 +125,45 @@ global.desc2 = '' // Add long description (90 caractres max) (Este parámetro se
 global.country = '' // Add country, example: 🇪🇨
 // • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
 
-global.packname = `╭ 𝙋𝙍𝙊𝙔𝙀𝘾𝙏𝙊 𝙓 🕷️\n┃\n┃ » WhatsApp :\n┃ +51 926 933 818 \n┃\n┃ » Facebook :\n┃ @cristhofer yallico pe \n┃\n┃ » 𝙸𝚗𝚜𝚝𝚊𝚐𝚛𝚊𝚖:\n┃ @cristhofer_yallico\n╰━━━━━━━━•` //"𝙋𝙍𝙊𝙔𝙀𝘾𝙏𝙊 𝙓 🕷️"
+global.packname = `╭ 𝙋𝙍𝙊𝙔𝙀𝘾𝙏𝙊 𝙓 🕷️\n┃\n┃ » WhatsApp :\n┃ +51 926 933 818 \n┃\n┃ » Facebook :\n┃ @yallico J-j \n┃\n┃ » 𝙸𝚗𝚜𝚝𝚊𝚐𝚛𝚊𝚖:\n┃ @cristhofer_yallico\n╰━━━━━━━━•` //"𝙋𝙍𝙊𝙔𝙀𝘾𝙏𝙊 𝙓 🕷️"
 global.author = ` ╭ 𝙋𝙍𝙊𝙔𝙀𝘾𝙏𝙊 🕷️ ✓\n ┃\n ┃ » WhatsApp :\n ┃ +51 926 933 818 \n ┃\n ┃ ⊹ Super Bot WhatsApp.\n ┃\n ┃ ♡ Apoyo\n ┃ » Yape :\n ┃ +51 936 994 155\n ╰━━━━━━━━•` //"𝙋𝙍𝙊𝙔𝙀𝘾𝙏𝙊 🕷️"
 
 // • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
-// [ES] > CUENTAS E INFORMACIÓN DE VERSIONES DEL BOT, POR FAVOR 
+// [ES] > INFORMACIÓN DE VERSIONES DEL BOT, POR FAVOR 
 // MANTENGA ESTO SIN MODIFICAR, NOS ESFORZAMOS A DIARIO POR OFRECERLES UN BOT PARA LA COMUNIDAD, SEA AGRADECIDO 😉
-// [EN] > ACCOUNTS AND BOT VERSION INFORMATION, PLEASE KEEP THIS UNCHANGED, WE STRIVE DAILY TO PROVIDE YOU WITH A BOT FOR THE COMMUNITY, BE GRATEFUL
-global.vs = ""
-global.vsJB = ""
-global.gt = "🕷️ 𝐏𝐑𝐎𝐘𝐄𝐂𝐓𝐎 𝐗"
+// [EN] > BOT VERSION INFORMATION, PLEASE KEEP THIS UNCHANGED, WE STRIVE DAILY TO PROVIDE YOU WITH A BOT FOR THE COMMUNITY, BE GRATEFUL
+global.vs = "𝙋𝙍𝙊𝙔𝙀𝘾𝙏𝙊 𝙓 🕷️"
+global.vsJB = "𝙋𝙍𝙊𝙔𝙀𝘾𝙏𝙊 𝙓 🕷️"
+global.gt = "𝙋𝙍𝙊𝙔𝙀𝘾𝙏𝙊 𝙓 🕷️"
 
-global.yt = "https://www.instagram.com/cristhofer_yallico"
-global.yt2 = "https://www.instagram.com/cristhofer_yallico"
-global.ig = "https://www.instagram.com/cristhofer_yallico"
-global.md = "https://www.instagram.com/cristhofer_yallico"
-global.fb = "https://www.instagram.com/cristhofer_yallico"
-global.tk = "https://www.instagram.com/cristhofer_yallico"
-global.ths = "https://www.instagram.com/cristhofer_yallico"
-global.paypal = 'https://www.instagram.com/cristhofer_yallico'
-global.asistencia = 'https://wa.me/51926933818?text=Hola%20Cris%20Deseo%20Comprar%20El%20Bot%20:3' //Contacto
-global.bot = 'https://wa.me/51926933818?text=Hola%20Cris%20Deseo%20Comprar%20El%20Bot%20:3' //🐧 𝗣𝗶𝗻𝗴𝘂𝗶𝗕𝗼𝘁-𝗠𝗗 🐧 𝙊𝙛𝙞𝙘𝙞𝙖𝙡 
-
-global.nna = 'https://www.instagram.com/cristhofer_yallico' // Cuentas
-global.nn2 = 'https://www.instagram.com/cristhofer_yallico' // Grupo tg GataBot
-global.nna2 = 'https://www.instagram.com/cristhofer_yallico' // Help
-global.nn = 'https://www.instagram.com/cristhofer_yallico' // Grupo 1
-global.nnn = 'https://www.instagram.com/cristhofer_yallico' // Grupo 2
-global.nnnt = 'https://www.instagram.com/cristhofer_yallico' // Grupo 3
-global.nnntt = 'https://www.instagram.com/cristhofer_yallico' // Grupo 4
-global.nnnttt = 'https://www.instagram.com/cristhofer_yallico' // Grupo 5
-global.nnnttt1 = 'https://www.instagram.com/cristhofer_yallico' // Grupo 6 COL
-global.nnnttt2 = 'https://www.instagram.com/cristhofer_yallico' // Grupo 7 COL
-global.nnnttt3 = 'https://www.instagram.com/cristhofer_yallico' // Grupo 8 COL
-global.nnnttt4 = 'https://www.instagram.com/cristhofer_yallico' // Grupo 9 COL
-global.nnnttt5 = 'https://www.instagram.com/cristhofer_yallico' // MULTI - BOTS
-global.nnnttt6 = 'https://www.instagram.com/cristhofer_yallico' // A.T.M.M
-global.channel1 = 'https://www.instagram.com/cristhofer_yallico'
-global.channel2 = 'https://www.instagram.com/cristhofer_yallico'
-global.channel3 = 'https://www.instagram.com/cristhofer_yallico'
 // • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
 
-global.rg = ''
+global.rg = '╰⊱🕷️⊱ *𝙍𝙀𝙎𝙐𝙇𝙏* ⊱🕷️⊱╮\n\n'
 global.resultado = rg
 
-global.ag = ''
+global.ag = '╰⊱🕷️⊱ *𝙒𝘼𝙍𝙉𝙄𝙉𝙂* ⊱🕷️⊱╮\n\n'
 global.advertencia = ag
 
-global.iig = ''
+global.iig = '╰⊱🕷️⊱ *𝙄𝙉𝙁𝙊𝙍𝙈𝘼𝙏𝙄𝙊𝙉* ⊱⊱╮\n\n'
 global.informacion = iig
 
-global.fg = ''
+global.fg = '╰⊱🕷️⊱ *𝙀𝙍𝙍𝙊𝙍* ⊱🕷️⊱╮\n\n'
 global.fallo = fg
 
-global.mg = ''
+global.mg = '╰⊱🕷️⊱ *𝙐𝙎𝙀𝘿 𝙄𝙏 𝙒𝙍𝙊𝙉𝙂* ⊱🕷️⊱╮\n\n'
 global.mal = mg
 
-global.eeg = ''
+global.eeg = '╰⊱🕷️⊱ *𝙍𝙀𝙋𝙊𝙍𝙏* ⊱🕷️⊱╮\n\n'
 global.envio = eeg
 
-global.eg = ''
+global.eg = '╰⊱🕷️⊱ *𝙎𝙐𝘾𝘾𝙀𝙎𝙎* ⊱🕷️⊱╮\n\n'
 global.exito = eg
 
 // • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
-global.wm = "🕷️ 𝐏𝐑𝐎𝐘𝐄𝐂𝐓𝐎 𝐗"
-global.igfg = "🕷️ 𝐏𝐑𝐎𝐘𝐄𝐂𝐓𝐎 𝐗"
-global.wait = "*⌛ _Cargando | Charging..._ ▬▭▭▭▭▭▭*"
-global.waitt = "*⌛ _Cargando | Charging..._ ▬▬▭▭▭*"
-global.waittt = "*⌛ _Cargando | Charging..._ ▬▬▬▬▭▭*"
-global.waitttt = "*⌛ _Cargando | Charging..._ ▬▬▬▬▬▬▭*"
-global.waittttt = "*✅ _Completado | Filled..._ ▬▬▬▬▬▬▬*"
+global.wm = "𝙋𝙍𝙊𝙔𝙀𝘾𝙏𝙊 𝙓 : 𝙋𝙍𝙊𝙔𝙀𝘾𝙏𝙊 🕷️"
+global.igfg = "𝙋𝙍𝙊𝙔𝙀𝘾𝙏𝙊 𝙓 🕷️"
 global.nomorown = "51926933818"
 global.pdoc = ["application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/vnd.ms-excel", "application/msword", "application/pdf", "text/rtf"]
-// • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
-
-// • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
-// ❰ IMAGEN DEL BOT : BOT IMAGE ❱
-global.imagen1 = fs.readFileSync("./media/menus/Menu3.jpg")
-global.imagen2 = fs.readFileSync("./media/menus/img1.jpg")
-global.imagen3 = fs.readFileSync("./media/menus/img2.jpg")
-global.imagen4 = fs.readFileSync("./media/menus/img3.jpg")
-global.imagen5 = fs.readFileSync("./media/menus/img4.jpg")
-global.imagen6 = fs.readFileSync("./media/menus/img5.jpg")
-global.imagen7 = fs.readFileSync("./media/menus/img6.jpg")
-global.imagen8 = fs.readFileSync("./media/menus/img7.jpg")
-global.imagen9 = fs.readFileSync("./media/menus/img8.jpg")
-global.imagen10 = fs.readFileSync("./media/menus/img9.jpg")
-global.imagen11 = fs.readFileSync("./media/menus/img10.jpg")
-global.imagen12 = fs.readFileSync("./media/menus/img11.jpg")
-global.imagen13 = fs.readFileSync("./media/menus/img12.jpg")
-
-global.img = 'https://i.imgur.com/IXlUwTW.jpg'
-global.img2 = 'https://i.imgur.com/EXTbyyn.jpg'
-
-global.img3 = 'https://i.imgur.com/oUAGYc2.jpg' //prem
-global.img4 = 'https://i.imgur.com/i0pccuo.jpg' //prem
-
-global.img5 = 'https://i.imgur.com/iL1snRx.jpeg'
-global.img6 = 'https://i.imgur.com/cYFgSKv.jpeg'
-global.img7 = 'https://i.imgur.com/JqL3h2V.jpeg'
-global.img8 = 'https://i.imgur.com/PCujt1s.jpeg'
-global.img9 = 'https://i.imgur.com/xfUEdDb.jpeg'
-
-global.img10 = 'https://i.imgur.com/DvHoMc3.jpg'
-global.img11 = 'https://i.imgur.com/5Q1MqGD.jpg'
-global.img12 = 'https://i.imgur.com/vWnsjh8.jpg'
-global.img13 = 'https://i.imgur.com/pCfFOgw.jpeg'
-global.img14 = 'https://i.imgur.com/knBDWRA.jpeg'
-global.img15 = 'https://i.imgur.com/QrkkKx7.jpeg'
-
-global.img16 = 'https://i.imgur.com/11MRjo4.jpeg' //+18
-
-global.img17 = 'https://i.imgur.com/JpYfcH0.jpeg'
-global.img18 = 'https://i.imgur.com/9yLH4W4.jpeg'
-
-global.logogit = 'https://tinyurl.com/2qvl9vgs'
-// • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
-
-// • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
-// ❰ RANDOMS ❱
-global.welgata = [tk, ig, yt2, yt2, ig, md, ig, yt, paypal, yt2, yt2, ig, fb, tk, ths, asistencia]
-global.redesMenu = [nna, nn, nn2, nnn, nnnt, nnntt, nnnttt, nnnttt1, nnnttt2, nnnttt3, nnnttt4, nnnttt5, md, ig, paypal, yt, asistencia, fb, tk]
-global.accountsgb = [channel1, channel2, channel3, tk, ig, yt, paypal, fb, ths, md, nna, asistencia]
-global.gataMenu = [img, img2, img6, img7, img8, img9, img13, img14, img15, img17, img18]
-global.gataVidMenu = ['https://qu.ax/AAvg.mp4', 'https://qu.ax/SeFS.mp4', 'https://qu.ax/NqZN.mp4']
-global.gataImg = [imagen1, imagen2, imagen3, imagen4, imagen5, imagen6, imagen7, imagen8, imagen9, imagen10, imagen11, imagen12, imagen13]
 // • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
 
 // • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
@@ -396,7 +313,7 @@ string = string.toLowerCase();
 let emott = {
       level: '🧬', limit: '💎', exp: '⚡', bank: '🏦',
       diamond: '💎+', health: '❤️', kyubi: '🌀', joincount: '🪙',
-      emerald: '💚', stamina: '✨', role: '💪', premium: '🎟️',
+      emerald: '🕷️', stamina: '✨', role: '💪', premium: '🎟️',
       pointxp: '📧', gold: '👑',
       
       trash: '🗑', crystal: '🔮', intelligence: '🧠', string: '🕸️', keygold: '🔑',
@@ -468,7 +385,7 @@ emoticon(string) {
 string = string.toLowerCase();
 let emotttt = {
       exp: '⚡', limit: '💎', diamond: '💎+', joincount: '🪙',
-      emerald: '💚', berlian: '♦️', kyubi: '🌀', gold: '👑',
+      emerald: '🕷️', berlian: '♦️', kyubi: '🌀', gold: '👑',
       money: '🐱', tiketcoin: '🎫', stamina: '✨',
             
       potion: '🥤', aqua: '💧', trash: '🗑', wood: '🪵',
